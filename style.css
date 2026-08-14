@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    /*background: url('fundo-fenix.jpg') no-repeat center center fixed;*/
+    background: url('fundo-fenix.webp') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
     overflow-y: hidden;
