@@ -1,8 +1,8 @@
 :root {
-    --foto-fundo: url('img/fachada-setor9.jpg'); 
+    --foto-fundo: url('img/fachada-jb.jpg'); 
     --blur-fundo: 8px;                 
 
-    --tempo-animacao: 1s;       
+    --tempo-animacao: 1s;        
     --distancia-queda: -80px;      
     --desfoque-inicial: 15px;      
 
