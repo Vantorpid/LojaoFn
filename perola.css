@@ -42,7 +42,7 @@ body {
     height: 100%;
     background: var(--foto-fundo) no-repeat center center;
     background-size: cover;
-    opacity: 0.5;
+    filter: blur(10px) brightness(0.4);
     z-index: -2;
     transform: translateZ(0);
 }
@@ -64,7 +64,7 @@ body {
     width: var(--botao-voltar-tamanho);
     height: var(--botao-voltar-tamanho);
     background: var(--cor-botao-voltar);
-    border-radius: 40%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,13 +129,14 @@ body {
     text-decoration: none;
     color: #ffffff;
     height: 100px; 
-    border-radius: 18px;
+    border-radius: 50px;
     overflow: hidden;
     position: relative;
     background: rgba(20, 20, 20, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
     transform: translateZ(0);
     will-change: transform;
@@ -181,7 +182,7 @@ body {
 }
 
 .card-glass:active {
-    transform: scale(0.95);
+    transform: scale(0.65);
 }
 
 .card-glass:active::before {
