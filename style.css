@@ -99,6 +99,7 @@ body {
                 inset 0 1px 1px rgba(255, 255, 255, 0.15);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
+    transform: translateZ(0);
 }
 
 .card-glass::before {
@@ -194,26 +195,22 @@ body {
 }
 
 @keyframes cairEntrando {
-    0% {
+0% {
         opacity: 0;
-        transform: translateY(var(--distancia-queda));
-        filter: blur(var(--desfoque-inicial));
+        transform: translateY(-30px) scale(0.96);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
-        filter: blur(0px);
+        transform: translateY(0) scale(1);
     }
 }
 
-.logo-container, .titulo {
-    opacity: 0;
-    animation: cairEntrando var(--tempo-animacao) ease-out forwards;
-}
-
+.logo-container, 
+.titulo, 
 .botoes-grupo a {
     opacity: 0;
-    animation: cairEntrando var(--tempo-animacao) ease-out forwards;
+    will-change: transform, opacity;
+    animation: cairEntrando var(--tempo-animacao) cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .logo-container {
