@@ -31,6 +31,42 @@
             </div>
         </div>
 
+                <!-- Botão Voltar (Canto Esquerdo) -->
+    <a href="index.html" class="botao-topo botao-voltar" aria-label="Voltar">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </a>
+
+<button class="botao-topo botao-faq" onclick="abrirFaq()" aria-label="Dúvidas Frequentes">
+        <svg viewBox="0 0 320 512" fill="currentColor">
+            <path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path>
+        </svg>
+    </button>
+
+    <!-- Modal do FAQ -->
+    <div id="modal-faq" class="modal-faq" onclick="fecharFaqFora(event)">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" onclick="fecharFaq()">✕</button>
+            <h2>Dúvidas Frequentes</h2>
+            
+            <div class="faq-item">
+                <h3>💳 Quais as formas de pagamento?</h3>
+                <p>Aceitamos Pix, cartões de crédito/débito e dinheiro.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🕒 Qual o horário de funcionamento?</h3>
+                <p>Segunda a Sexta das 08h às 18h. Sábados das 08h às 12h.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>📦 Fazem entregas?</h3>
+                <p>Sim! Entre em contato pelo WhatsApp para consultar a taxa para o seu endereço.</p>
+            </div>
+        </div>
+    </div>
+
         <div class="animar-elemento" style="animation-delay: 0.15s;">
             <h1 class="titulo">Lojão Fênix - Jardim Brasília</h1>
         </div>
@@ -69,6 +105,18 @@
         </div>
 
     </div>
+
+<script>
+        function abrirFaq() {
+            document.getElementById('modal-faq').classList.add('ativo');
+        }
+        function fecharFaq() {
+            document.getElementById('modal-faq').classList.remove('ativo');
+        }
+        function fecharFaqFora(e) {
+            if (e.target.id === 'modal-faq') fecharFaq();
+        }
+    </script>
 
 </body>
 </html>

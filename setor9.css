@@ -4,10 +4,10 @@
     --tempo-animacao: 0.5s;       
     --distancia-queda: -30px;      
 
-    --cor-botao-voltar: rgb(219, 78, 2);
-    --botao-voltar-tamanho: 44px;
-    --botao-voltar-top: 20px;
-    --botao-voltar-left: 20px;
+    --cor-botao-topo: rgb(219, 78, 2);
+    --botao-topo-tamanho: 44px;
+    --botao-topo-top: 20px;
+    --botao-topo-margem: 20px;
     --deslocamento-texto: 70px;
 }
 
@@ -57,34 +57,140 @@ body {
     z-index: -1;
 }
 
-.botao-voltar {
+/* Base Comum para os Botões do Topo (Voltar e FAQ) */
+.botao-topo {
     position: fixed;
-    top: var(--botao-voltar-top);
-    left: var(--botao-voltar-left);
-    width: var(--botao-voltar-tamanho);
-    height: var(--botao-voltar-tamanho);
-    background: var(--cor-botao-voltar);
+    top: var(--botao-topo-top);
+    width: var(--botao-topo-tamanho);
+    height: var(--botao-topo-tamanho);
+    background: var(--cor-botao-topo);
     border-radius: 50%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     text-decoration: none;
     z-index: 10;
+    cursor: pointer;
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     will-change: transform;
 }
 
-.botao-voltar svg {
+.botao-voltar {
+    left: var(--botao-topo-margem);
+}
+
+.botao-faq {
+    right: var(--botao-topo-margem);
+}
+
+.botao-topo svg {
     width: 45%;
     height: 45%;
     stroke: #000000;
 }
 
-.botao-voltar:active {
+.botao-faq svg {
+    fill: #000000;
+    stroke: none;
+}
+
+.botao-topo:active {
     transform: scale(0.88);
 }
 
+/* ======================================================= */
+/* JANELA MODAL POP-UP (FAQ)                               */
+/* ======================================================= */
+.modal-faq {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.modal-faq.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-conteudo {
+    background: rgba(25, 25, 25, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 25px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: left;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-faq.ativo .modal-conteudo {
+    transform: translateY(0);
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.modal-conteudo h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: rgb(240, 110, 40);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.faq-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.faq-item p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+}
+
+/* ======================================================= */
+/* CONTAINER E CARDS                                       */
+/* ======================================================= */
 .container {
     position: relative;
     z-index: 2;
@@ -132,8 +238,8 @@ body {
     border-radius: 50px;
     overflow: hidden;
     position: relative;
-    background: rgba(15, 15, 15, 0.75); 
-    border: 1px solid rgba(255, 255, 255, 0.25); /* Borda em destaque */
+    background: rgba(20, 20, 20, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 
                 inset 0 1px 1px rgba(255, 255, 255, 0.2);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s ease, border-color 0.2s ease;
@@ -194,6 +300,12 @@ body {
     font-weight: 700;
     margin-bottom: 2px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
 }
 
 @keyframes cairEntrando {
