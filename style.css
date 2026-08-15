@@ -17,7 +17,7 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 115vh;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -232,3 +232,38 @@ body {
 .botoes-grupo a:nth-child(3) {
     animation-delay: calc(var(--atraso-cadencia) * 4);
 }
+/* Status online - offline */
+.status-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    
+    margin-top: 6px;
+    padding: 1px 10px;
+    
+    font-size: 0.8rem;
+    font-weight: 600;
+    
+}
+
+.bolinha {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Verde quando Aberto */
+.status-badge.aberto .bolinha {
+    background-color: #25d366;
+    box-shadow: 0 0 6px #25d366;
+}
+.status-badge.aberto .texto-status { color: #25d366; }
+
+/* Vermelho quando Fechado */
+.status-badge.fechado .bolinha {
+    background-color: #ff3b30;
+    box-shadow: 0 0 6px #ff3b30;
+}
+.status-badge.fechado .texto-status { color: #ff3b30; }

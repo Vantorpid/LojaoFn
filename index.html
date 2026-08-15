@@ -28,6 +28,11 @@
                 <div class="card-content">
                     <h2>LOJÃO FÊNIX</h2>
                     <p>Setor 9</p>
+                    
+                    <div class="status-badge" data-loja="setor9">
+                        <span class="bolinha"></span>
+                        <span class="texto-status">---</span>
+                    </div>
                 </div>
             </a>
             
@@ -36,18 +41,92 @@
                 <div class="card-content">
                     <h2>LOJÃO FÊNIX</h2>
                     <p>Pérola</p>
+
+        <div class="status-badge" data-loja="perola">
+            <span class="bolinha"></span>
+            <span class="texto-status">---</span>
+                </div>
                 </div>
             </a>
             
-            <a href="jardimbr.html" class="card-glass">
-                <img src="img/fachada-jb.webp" alt="Fachada Jardim Brasília" class="card-bg-img">
-                <div class="card-content">
-                    <h2>LOJÃO FÊNIX</h2>
-                    <p>Jardim Brasília</p>
-                </div>
-            </a>
+    <a href="jardimbr.html" class="card-glass">
+    <img src="img/fachada-jb.webp" alt="Fachada Jardim Brasília" class="card-bg-img">
+    <div class="card-content">
+        <h2>LOJÃO FÊNIX</h2>
+        <p>Jardim Brasília</p>
+        
+        <div class="status-badge" data-loja="jardimbr">
+            <span class="bolinha"></span>
+            <span class="texto-status">---</span>
+        </div>
+    </div>
+</a>
             
         </div>
     </div>
+
+<script>
+    function atualizarStatusCards() {
+        const agora = new Date();
+        const dia = agora.getDay(); // 0 = Domingo, 1-5 = Seg-Sex, 6 = Sábado
+        const hora = agora.getHours() + (agora.getMinutes() / 60); // Ex: 18h30 vira 18.5
+
+        // 1. REGRAS DA LOJA: JARDIM BRASÍLIA
+
+        let abertoJardimBR = false;
+        if (dia >= 1 && dia <= 5 && hora >= 8.5 && hora < 18.5) { // Seg a Sex 
+            abertoJardimBR = true;
+        } else if (dia === 6 && hora >= 8.5 && hora < 18.5) {     // Sábado 
+            abertoJardimBR = true;
+        } else if (dia === 0 && hora >= 9 && hora < 13) {     // DOMINGO 
+            abertoJardimBR = true;
+        }
+
+        // 2. REGRAS DA LOJA: PÉROLA
+
+        let abertoPerola = false;
+        if (dia >= 1 && dia <= 5 && hora >= 8.5 && hora < 19) { // Seg a Sex
+            abertoPerola = true;
+        } else if (dia === 6 && hora >= 8 && hora < 18.5) {     // Sábado
+            abertoPerola = true;
+        } else if (dia === 0 && hora >= 9 && hora < 13) {     // DOMINGO 
+            abertoPerola = true;
+        }
+
+        // 3. REGRAS DA LOJA: SETOR 9
+
+        let abertoSetor9 = false;
+        if (dia >= 1 && dia <= 5 && hora >= 8 && hora < 18.5) { // Seg a Sex
+            abertoSetor9 = true;
+        } else if (dia === 6 && hora >= 8 && hora < 18) {     // Sábado
+            abertoSetor9 = true;
+        } else if (dia === 0 && hora >= 9 && hora < 13) {     // DOMINGO 
+            abertoSetor9 = false;
+        }
+
+        const horarios = {
+            'jardimbr': abertoJardimBR,
+            'perola': abertoPerola,
+            'setor9': abertoSetor9
+        };
+
+        // Aplica o status correto em cada card
+        document.querySelectorAll('.status-badge[data-loja]').forEach(badge => {
+            const loja = badge.getAttribute('data-loja');
+            const estaAberto = horarios[loja];
+
+            if (estaAberto) {
+                badge.className = 'status-badge aberto';
+                badge.querySelector('.texto-status').textContent = 'Aberto agora';
+            } else {
+                badge.className = 'status-badge fechado';
+                badge.querySelector('.texto-status').textContent = 'Fechado agora';
+            }
+        });
+    }
+
+    atualizarStatusCards();
+</script>
+
 </body>
 </html>
