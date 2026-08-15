@@ -200,18 +200,37 @@ body {
     text-align: center;
 }
 
+/* Container da Logo */
 .logo-container {
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
+/* Imagem da Logo - Animação Ultra Suave */
 .logo {
     max-width: 100%;
     width: 500px;    
     height: 180px;   
     object-fit: contain;
-    filter: drop-shadow(0 4px 12px rgba(161, 59, 0, 0.6));
+    
+    /* Sombra fixa bem discreta e elegante */
+    filter: drop-shadow(0 4px 12px rgba(161, 59, 0, 0.5));
+    
+    /* Animação lenta de 6 segundos */
+    animation: brilhoSuave 3s ease-in-out infinite;
+}
+
+/* Animação: Apenas um toque leve de luz que vai e volta sem sobressaltos */
+@keyframes brilhoSuave {
+    0%, 100% {
+        filter: drop-shadow(0 4px 12px rgba(161, 59, 0, 0.5)) brightness(1);
+    }
+    50% {
+        /* Apenas 15% a mais de brilho e um suave aumento na sombra */
+        filter: drop-shadow(0 4px 18px rgba(255, 90, 0, 0.7)) brightness(1.15);
+    }
 }
 
 .titulo {
