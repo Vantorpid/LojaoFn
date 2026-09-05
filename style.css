@@ -21,7 +21,7 @@ html, body {
 }
 
 html {
-    background: url('fundo-fenix.webp') no-repeat center center fixed;
+    background: url('fundo-fenix.webp') no-repeat center center;
     background-size: cover;
     overscroll-behavior-y: none;
 }
