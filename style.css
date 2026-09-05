@@ -16,8 +16,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html {
+html, body {
     height: 100%;
+}
+
+html {
     background: url('fundo-fenix.webp') no-repeat center center fixed;
     background-size: cover;
     overscroll-behavior-y: none;
@@ -25,17 +28,17 @@ html {
 
 body {
     min-height: 100vh;
-    min-height: 110dvh;
+    min-height: -webkit-fill-available;
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     display: flex;
     justify-content: center; 
     align-items: center;
-    background: url('fundo-fenix.webp') no-repeat center center fixed;
-    background-size: cover;
+    background: transparent;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 0;
-    padding-top: 0px; 
-    padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .smoke-overlay {
