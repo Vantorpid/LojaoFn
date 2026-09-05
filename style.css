@@ -21,6 +21,7 @@ html, body {
 }
 
 html {
+    color-scheme: dark;
     background: url('fundo-fenix.webp') no-repeat center center;
     background-size: cover;
     overscroll-behavior-y: none;
