@@ -26,7 +26,29 @@ html {
     overscroll-behavior-y: none;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    background: url('fundo-fenix.webp') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
 body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: transparent;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+/*body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     min-height: 110dvh;
@@ -39,7 +61,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 0;
-}
+} */
 
 .smoke-overlay {
     position: absolute;
