@@ -86,9 +86,9 @@
         // 2. REGRAS DA LOJA: PÉROLA
 
         let abertoPerola = false;
-        if (dia >= 1 && dia <= 5 && hora >= 8.5 && hora < 19) { // Seg a Sex
+        if (dia >= 1 && dia <= 5 && hora >= 9 && hora < 19) { // Seg a Sex
             abertoPerola = true;
-        } else if (dia === 6 && hora >= 8 && hora < 18.5) {     // Sábado
+        } else if (dia === 6 && hora >= 8 && hora < 18) {     // Sábado 1
             abertoPerola = true;
         } else if (dia === 0 && hora >= 9 && hora < 13) {     // DOMINGO 
             abertoPerola = true;
@@ -97,7 +97,7 @@
         // 3. REGRAS DA LOJA: SETOR 9
 
         let abertoSetor9 = false;
-        if (dia >= 1 && dia <= 5 && hora >= 8 && hora < 18.5) { // Seg a Sex
+        if (dia >= 1 && dia <= 5 && hora >= 8 && hora < 18) { // Seg a Sex
             abertoSetor9 = true;
         } else if (dia === 6 && hora >= 8 && hora < 18) {     // Sábado
             abertoSetor9 = true;
