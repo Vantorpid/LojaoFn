@@ -362,3 +362,126 @@ body {
         transform: translateY(0) scale(1);
     }
 }
+
+/* Container que cobre a tela inteira */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; /* Fica na frente de tudo visualmente */
+    pointer-events: none; /* MÁGICA: Permite clicar nos botões que estão embaixo */
+    overflow: hidden;
+}
+
+/* Criação dos flocos de neve (exemplo com animação leve) */
+.snow-container::before {
+    content: "";
+    position: absolute;
+    top: -10vh;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #fdfdfd, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: cair-neve 10s linear infinite;
+}
+
+@keyframes cair-neve {
+    0% {
+        transform: translateY(100);
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+/* --- AMONTOADO DE NEVE E GORRO NO RODAPÉ --- */
+.neve-acumulada-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9998;
+    pointer-events: none; /* os cliques passam direto */
+    line-height: 0;
+}
+
+.gorro-natal-rodape {
+    position: absolute;
+    bottom: -200px;   /* apoiado em cima da neve */
+    left: 30px;     /* troque por "right: 30px" para o outro lado */
+    z-index: 999;
+    pointer-events: none;
+    transform: rotate(-18deg);
+    transform-origin: bottom center;
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* --- PAPAI NOEL VOADOR --- */
+.papai-noel-voador {
+    position: fixed;
+    top: 200px;               /* altura na tela: ajuste como quiser */
+    left: 0;
+    width: 250px;
+    z-index: 5;              /* acima dos cards, abaixo dos botões do topo e do modal */
+    pointer-events: none;
+    transform: translateX(-120%);
+    opacity: 0;
+    animation: voarNoel 6s linear infinite;
+    animation-delay: 0ms;
+}
+
+.noel-svg {
+    display: block;
+    height: auto;
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.45));
+    animation: balancoNoel 1.4s ease-in-out infinite alternate;
+}
+
+/* Atravessa a tela de ponta a ponta, some e espera o próximo voo */
+@keyframes voarNoel {
+    0%   { transform: translateX(-120%); opacity: 0; }
+    4%   { opacity: 1; }
+    50%  { transform: translateX(calc(100vw + 20%)); opacity: 1; }
+    51%  { transform: translateX(calc(100vw + 20%)); opacity: 0; }
+    100% { transform: translateX(calc(100vw + 20%)); opacity: 0; }
+}
+
+/* Sobe e desce levemente, como se estivesse voando */
+@keyframes balancoNoel {
+    from { transform: translateY(-6px) rotate(-1.5deg); }
+    to   { transform: translateY(8px)  rotate(2deg); }
+}
+
+/* Pernas das renas galopando */
+.pata {
+    transform-box: fill-box;
+    transform-origin: 50% 0;
+    animation: galope 0.45s ease-in-out infinite alternate;
+}
+.pata-b { animation-direction: alternate-reverse; }
+
+@keyframes galope {
+    from { transform: rotate(-28deg); }
+    to   { transform: rotate(28deg); }
+}
+
+/* Brilhinhos do rastro e nariz da Rudolph */
+.brilhinho { animation: piscar 1.2s ease-in-out infinite; }
+@keyframes piscar {
+    0%, 100% { opacity: 0.2; }
+    50%      { opacity: 1; }
+}
+.nariz-rudolph { animation: piscar 0.9s ease-in-out infinite; filter: drop-shadow(0 0 4px #FF1744); }
+
+@media (prefers-reduced-motion: reduce) {
+    .papai-noel-voador, .noel-svg, .pata, .brilhinho, .nariz-rudolph { animation: none; }
+    .papai-noel-voador { display: none; }
+}

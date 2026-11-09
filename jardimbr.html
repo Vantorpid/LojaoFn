@@ -127,5 +127,318 @@
 <!-- Vercel Web Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 
+
+
+<!--Papai noel/Natal, tirar em janeiro-->
+
+<!-- NEVE CAINDO -->
+<div class="snow-container"></div>
+
+<!-- PAPAI NOEL VOADOR -->
+<div class="papai-noel-voador">
+<svg class="noel-svg" viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F04444"/><stop offset="1" stop-color="#9B1118"/>
+    </linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE9A0"/><stop offset=".5" stop-color="#E0A82E"/><stop offset="1" stop-color="#A8741A"/>
+    </linearGradient>
+    <linearGradient id="gFur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B8804E"/><stop offset="1" stop-color="#6E4020"/>
+    </linearGradient>
+    <linearGradient id="gSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE0C6"/><stop offset="1" stop-color="#F2A98B"/>
+    </linearGradient>
+    <linearGradient id="gBeard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D2DAE6"/>
+    </linearGradient>
+    <linearGradient id="gSack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B98648"/><stop offset="1" stop-color="#6B4423"/>
+    </linearGradient>
+    <radialGradient id="gGlow">
+      <stop offset="0" stop-color="#FF8A80" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#FF1744" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FF1744" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- RASTRO DE BRILHOS -->
+  <g fill="#FFF3B0">
+    <path class="brilhinho" style="animation-delay:0s"   d="M10 120 l3 -9 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3z"/>
+    <path class="brilhinho" style="animation-delay:.3s"  d="M4 170 l2 -6 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2z"/>
+    <path class="brilhinho" style="animation-delay:.6s"  d="M22 205 l2 -6 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2z"/>
+    <circle class="brilhinho" style="animation-delay:.9s" cx="30" cy="145" r="2.5"/>
+    <circle class="brilhinho" style="animation-delay:.45s" cx="14" cy="95" r="2"/>
+  </g>
+
+  <!-- SACO DE PRESENTES (atrás do Noel) -->
+  <g>
+    <rect x="48" y="40" width="26" height="24" rx="2" fill="#2E9E5B" transform="rotate(-10 61 52)"/>
+    <rect x="58" y="40" width="5" height="24" fill="#FFD54F" transform="rotate(-10 61 52)"/>
+    <rect x="74" y="34" width="24" height="26" rx="2" fill="#2F6FD6" transform="rotate(8 86 47)"/>
+    <rect x="84" y="34" width="5" height="26" fill="#FFD54F" transform="rotate(8 86 47)"/>
+    <path d="M42 135 C22 105 30 72 62 62 C84 56 104 76 108 104 L108 135 Z" fill="url(#gSack)"/>
+    <path d="M52 70 C56 62 70 60 80 64 C76 72 62 76 52 70Z" fill="#8A5A2B"/>
+    <path d="M50 72 C60 80 78 80 88 70" fill="none" stroke="#FFD54F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M44 125 C38 108 40 90 52 80" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- RÉDEAS (atrás das renas) -->
+  <g fill="none" stroke="#3E2723" stroke-width="2" stroke-linecap="round">
+    <path d="M262 182 C320 192 360 192 400 178"/>
+    <path d="M400 178 C460 190 520 172 570 158"/>
+    <path d="M234 112 C300 130 360 150 400 176"/>
+  </g>
+
+  <!-- ===== RENA 1 ===== -->
+  <g transform="translate(300 110)">
+    <g transform="translate(44 70)"><g class="pata pata-b"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#5A3318"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <g transform="translate(98 70)"><g class="pata"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#5A3318"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <path d="M14 48 C2 44 -4 54 2 62 C8 60 14 56 16 52Z" fill="#fff"/>
+    <ellipse cx="60" cy="60" rx="48" ry="24" fill="url(#gFur)"/>
+    <ellipse cx="62" cy="73" rx="36" ry="9" fill="#EBCFA6" opacity=".75"/>
+    <path d="M95 50 C108 40 115 28 122 22 L138 32 C130 48 118 62 100 78Z" fill="url(#gFur)"/>
+    <path d="M100 56 C108 48 114 40 120 32" stroke="#EBCFA6" stroke-width="5" stroke-linecap="round" opacity=".6" fill="none"/>
+    <path d="M120 20 C128 12 146 14 156 24 C162 30 160 38 152 40 L138 38 C128 38 120 32 120 20Z" fill="url(#gFur)"/>
+    <ellipse cx="152" cy="34" rx="9" ry="6" fill="#EBCFA6"/>
+    <circle cx="158" cy="30" r="4.5" fill="#2b1a10"/>
+    <circle cx="141" cy="24" r="2.6" fill="#1a0f08"/><circle cx="142" cy="23" r=".9" fill="#fff"/>
+    <path d="M126 16 C116 6 110 14 118 24Z" fill="#8A5A2B"/>
+    <path d="M140 14 C142 2 148 -6 146 -16 M144 0 C150 -2 154 -8 156 -12" fill="none" stroke="#B89660" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M132 14 C130 2 124 -6 126 -18 M128 -2 C122 -4 118 -10 116 -14 M128 -10 C134 -12 138 -18 138 -24" fill="none" stroke="#D2B07A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 44 C104 56 106 66 100 78" fill="none" stroke="#C62828" stroke-width="5" stroke-linecap="round"/>
+    <path d="M70 38 C84 44 96 62 98 78" fill="none" stroke="#C62828" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="78" r="5" fill="url(#gGold)"/><circle cx="99" cy="77" r="1.4" fill="#fff" opacity=".8"/>
+    <g transform="translate(30 70)"><g class="pata"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#7A4A26"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <g transform="translate(84 70)"><g class="pata pata-b"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#7A4A26"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+  </g>
+
+  <!-- ===== RUDOLPH ===== -->
+  <g transform="translate(470 90)">
+    <g transform="translate(44 70)"><g class="pata"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#5A3318"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <g transform="translate(98 70)"><g class="pata pata-b"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#5A3318"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <path d="M14 48 C2 44 -4 54 2 62 C8 60 14 56 16 52Z" fill="#fff"/>
+    <ellipse cx="60" cy="60" rx="48" ry="24" fill="url(#gFur)"/>
+    <ellipse cx="62" cy="73" rx="36" ry="9" fill="#EBCFA6" opacity=".75"/>
+    <path d="M95 50 C108 40 115 28 122 22 L138 32 C130 48 118 62 100 78Z" fill="url(#gFur)"/>
+    <path d="M100 56 C108 48 114 40 120 32" stroke="#EBCFA6" stroke-width="5" stroke-linecap="round" opacity=".6" fill="none"/>
+    <path d="M120 20 C128 12 146 14 156 24 C162 30 160 38 152 40 L138 38 C128 38 120 32 120 20Z" fill="url(#gFur)"/>
+    <ellipse cx="152" cy="34" rx="9" ry="6" fill="#EBCFA6"/>
+    <circle cx="141" cy="24" r="2.6" fill="#1a0f08"/><circle cx="142" cy="23" r=".9" fill="#fff"/>
+    <path d="M126 16 C116 6 110 14 118 24Z" fill="#8A5A2B"/>
+    <path d="M140 14 C142 2 148 -6 146 -16 M144 0 C150 -2 154 -8 156 -12" fill="none" stroke="#B89660" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M132 14 C130 2 124 -6 126 -18 M128 -2 C122 -4 118 -10 116 -14 M128 -10 C134 -12 138 -18 138 -24" fill="none" stroke="#D2B07A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 44 C104 56 106 66 100 78" fill="none" stroke="#C62828" stroke-width="5" stroke-linecap="round"/>
+    <path d="M70 38 C84 44 96 62 98 78" fill="none" stroke="#C62828" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="78" r="5" fill="url(#gGold)"/>
+    <!-- nariz vermelho brilhante -->
+    <circle cx="160" cy="30" r="16" fill="url(#gGlow)" class="nariz-rudolph"/>
+    <circle cx="159" cy="30" r="5.5" fill="#FF1744" class="nariz-rudolph"/>
+    <circle cx="157.5" cy="28" r="1.6" fill="#fff" opacity=".85"/>
+    <g transform="translate(30 70)"><g class="pata pata-b"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#7A4A26"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+    <g transform="translate(84 70)"><g class="pata"><path d="M-5 0 L5 0 C4 14 3 24 4 34 L-4 34 C-3 24 -4 14 -5 0Z" fill="#7A4A26"/><path d="M-5 34 L5 34 L6 40 L-6 40Z" fill="#1d1109"/></g></g>
+  </g>
+
+  <!-- ===== PAPAI NOEL ===== -->
+  <!-- corpo -->
+  <path d="M104 132 C98 96 118 70 150 68 C182 70 202 96 196 132Z" fill="url(#gRed)"/>
+  <path d="M112 100 C120 84 134 76 146 74" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+  <!-- pelo central do casaco -->
+  <rect x="146" y="76" width="8" height="56" rx="4" fill="#fff"/>
+  <!-- cinto -->
+  <rect x="102" y="108" width="96" height="11" fill="#1c1c1c"/>
+  <rect x="139" y="105" width="16" height="17" rx="2" fill="url(#gGold)"/>
+  <rect x="143" y="109" width="8" height="9" rx="1" fill="#1c1c1c"/>
+  <!-- braço -->
+  <path d="M182 84 C198 88 212 98 226 108" fill="none" stroke="#B31820" stroke-width="17" stroke-linecap="round"/>
+  <path d="M182 80 C198 84 212 94 224 102" fill="none" stroke="#E53935" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <rect x="214" y="98" width="12" height="20" rx="6" fill="#fff" transform="rotate(35 220 108)"/>
+  <circle cx="234" cy="113" r="9" fill="#1c1c1c"/>
+  <circle cx="231" cy="110" r="2.5" fill="#fff" opacity=".25"/>
+  <!-- cabeça -->
+  <circle cx="150" cy="56" r="19" fill="url(#gSkin)"/>
+  <ellipse cx="139" cy="59" rx="4.5" ry="3.5" fill="#FF8A80" opacity=".55"/>
+  <ellipse cx="161" cy="59" rx="4.5" ry="3.5" fill="#FF8A80" opacity=".55"/>
+  <!-- barba -->
+  <path d="M131 56 C128 82 144 98 152 100 C162 98 174 82 169 56 C165 68 158 70 150 70 C142 70 135 68 131 56Z" fill="url(#gBeard)"/>
+  <path d="M140 80 C146 88 152 90 158 86 M136 70 C140 76 142 80 144 84" fill="none" stroke="#B9C3D2" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- bigode -->
+  <path d="M150 62 C146 56 134 58 132 64 C138 68 146 68 150 64Z" fill="url(#gBeard)"/>
+  <path d="M150 62 C154 56 166 58 168 64 C162 68 154 68 150 64Z" fill="url(#gBeard)"/>
+  <circle cx="151" cy="59" r="4.2" fill="#F4967F"/>
+  <circle cx="150" cy="57.8" r="1.2" fill="#fff" opacity=".6"/>
+  <!-- olhos e sobrancelhas -->
+  <circle cx="143" cy="50" r="2" fill="#1a1a1a"/><circle cx="143.6" cy="49.4" r=".7" fill="#fff"/>
+  <circle cx="158" cy="50" r="2" fill="#1a1a1a"/><circle cx="158.6" cy="49.4" r=".7" fill="#fff"/>
+  <path d="M138 45 C141 42 146 42 148 45 M153 45 C155 42 160 42 163 45" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- gorro -->
+  <path d="M135 22 C116 10 98 22 92 46 C90 52 98 54 101 48 C105 36 118 32 140 36Z" fill="url(#gRed)"/>
+  <path d="M131 44 C129 26 142 12 160 12 C170 12 178 20 176 44Z" fill="url(#gRed)"/>
+  <path d="M138 30 C142 20 152 15 160 16" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+  <rect x="126" y="40" width="54" height="12" rx="6" fill="#fff"/>
+  <path d="M130 47 C150 51 166 51 178 46" fill="none" stroke="#D2DAE6" stroke-width="2"/>
+  <g fill="#fff">
+    <circle cx="92" cy="50" r="8"/><circle cx="86" cy="46" r="5"/><circle cx="98" cy="46" r="5"/>
+    <circle cx="90" cy="57" r="4.5"/><circle cx="97" cy="55" r="4"/>
+  </g>
+  <circle cx="90" cy="48" r="3" fill="#D2DAE6" opacity=".6"/>
+
+  <!-- ===== TRENÓ (na frente do Noel) ===== -->
+  <path d="M40 118 C40 170 80 206 140 206 L240 206 C256 206 262 192 256 178 L240 122 C200 130 100 130 40 118Z" fill="url(#gRed)"/>
+  <path d="M52 140 C60 170 90 192 130 194" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 118 C100 130 200 130 240 122" fill="none" stroke="url(#gGold)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M46 150 C70 188 110 198 160 198 L236 198" fill="none" stroke="url(#gGold)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>
+  <path d="M40 118 C18 110 10 138 30 144" fill="none" stroke="url(#gGold)" stroke-width="6" stroke-linecap="round"/>
+  <!-- patins -->
+  <path d="M20 222 L238 222 C260 222 274 206 266 186 C262 176 272 168 278 176" fill="none" stroke="url(#gGold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 206 L70 222 M150 206 L150 222 M226 206 L226 222" stroke="#A8741A" stroke-width="5" stroke-linecap="round"/>
+  <!-- guizo -->
+  <circle cx="262" cy="182" r="6" fill="url(#gGold)"/><circle cx="260" cy="180" r="1.6" fill="#fff" opacity=".8"/>
+</svg>
+</div>
+
+<!-- NEVE ACUMULADA + GORRO -->
+<div class="neve-acumulada-container">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" width="100%" height="60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gNeve" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFE0F2"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 40 C80 14 160 30 240 24 C340 16 400 44 520 30 C640 16 720 42 840 28 C960 14 1040 40 1160 26 C1260 16 1360 34 1440 22 L1440 70 L0 70Z" fill="url(#gNeve)"/>
+    <path d="M0 40 C80 14 160 30 240 24 C340 16 400 44 520 30 C640 16 720 42 840 28 C960 14 1040 40 1160 26 C1260 16 1360 34 1440 22" fill="none" stroke="#fff" stroke-width="3"/>
+  </svg>
+
+  <div class="gorro-natal-rodape">
+<svg width="160" viewBox="0 0 210 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hcRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset=".35" stop-color="#E02A30"/>
+      <stop offset=".7" stop-color="#A5121A"/>
+      <stop offset="1" stop-color="#5E070C"/>
+    </linearGradient>
+    <linearGradient id="hcShadeBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A0408" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3A0408" stop-opacity=".85"/>
+    </linearGradient>
+    <linearGradient id="hcFur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".6" stop-color="#EEF2F8"/>
+      <stop offset="1" stop-color="#B7C3D4"/>
+    </linearGradient>
+    <radialGradient id="hcPom" cx=".35" cy=".3" r=".85">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".6" stop-color="#E9EEF5"/>
+      <stop offset="1" stop-color="#A9B6C9"/>
+    </radialGradient>
+    <radialGradient id="hcFloco" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D3DCE8"/>
+    </radialGradient>
+    <clipPath id="hcClip">
+      <path d="M28 114 C22 66 52 24 102 19 C142 16 174 42 187 82 L174 114 C130 104 70 104 28 114Z"/>
+    </clipPath>
+    <filter id="hcBlur"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+
+  <!-- sombra projetada na neve -->
+  <ellipse cx="102" cy="154" rx="86" ry="8" fill="#5A7390" opacity=".35" filter="url(#hcBlur)"/>
+
+  <!-- CONE -->
+  <path d="M28 114 C22 66 52 24 102 19 C142 16 174 42 187 82 L174 114 C130 104 70 104 28 114Z" fill="url(#hcRed)"/>
+
+  <!-- sombreamento e dobras (cortados pelo formato do cone) -->
+  <g clip-path="url(#hcClip)">
+    <!-- sombra lateral direita, bem marcada -->
+    <path d="M120 10 C170 30 196 70 190 118 L140 118 C146 80 138 44 100 22Z" fill="#3A0408" opacity=".55"/>
+    <!-- dobras escuras -->
+    <path d="M52 112 C48 84 58 52 84 30" fill="none" stroke="#5E070C" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <path d="M90 108 C92 82 104 56 128 38" fill="none" stroke="#4A050A" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+    <path d="M128 108 C132 88 140 70 156 56" fill="none" stroke="#3A0408" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <!-- vinco claro ao lado de cada dobra -->
+    <path d="M60 110 C56 84 66 54 90 34" fill="none" stroke="#FF8A8A" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+    <path d="M98 106 C100 82 112 58 134 42" fill="none" stroke="#FF8A8A" stroke-width="2.5" stroke-linecap="round" opacity=".45"/>
+    <!-- brilho principal (luz vindo da esquerda) -->
+    <path d="M36 98 C34 62 56 34 90 26" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+    <path d="M42 92 C42 66 58 44 80 34" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    <!-- sombra que a barra de pelo faz no tecido -->
+    <rect x="10" y="84" width="190" height="34" fill="url(#hcShadeBand)"/>
+  </g>
+
+  <!-- costura pontilhada -->
+  <path d="M34 100 C130 92 160 96 178 100" fill="none" stroke="#FFC9C9" stroke-width="1.4" stroke-dasharray="3 4" stroke-linecap="round" opacity=".6"/>
+
+  <!-- BARRA DE PELO: camada de sombra atrás -->
+  <path d="M12 122 C8 104 30 96 102 96 C174 96 198 104 194 122 C196 140 172 146 102 146 C32 146 8 140 12 122Z" fill="#8E9CB2" opacity=".55" transform="translate(0 3)"/>
+  <!-- barra principal -->
+  <path d="M12 120 C8 102 30 94 102 94 C174 94 198 102 194 120 C196 138 172 144 102 144 C32 144 8 138 12 120Z" fill="url(#hcFur)"/>
+
+  <!-- tufos de pelo (volumes com sombra) -->
+  <g>
+    <circle cx="16" cy="118" r="9" fill="url(#hcFloco)"/>
+    <circle cx="26" cy="134" r="9" fill="url(#hcFloco)"/>
+    <circle cx="46" cy="142" r="9" fill="url(#hcFloco)"/>
+    <circle cx="70" cy="145" r="9" fill="url(#hcFloco)"/>
+    <circle cx="96" cy="146" r="9" fill="url(#hcFloco)"/>
+    <circle cx="122" cy="146" r="9" fill="url(#hcFloco)"/>
+    <circle cx="148" cy="143" r="9" fill="url(#hcFloco)"/>
+    <circle cx="170" cy="136" r="9" fill="url(#hcFloco)"/>
+    <circle cx="188" cy="120" r="9" fill="url(#hcFloco)"/>
+    <circle cx="24" cy="102" r="8" fill="url(#hcFloco)"/>
+    <circle cx="176" cy="102" r="8" fill="url(#hcFloco)"/>
+  </g>
+
+  <!-- sombras entre os tufos -->
+  <g fill="none" stroke="#9FADC2" stroke-width="2" stroke-linecap="round" opacity=".85">
+    <path d="M20 126 C24 132 28 134 32 134"/>
+    <path d="M38 138 C42 142 46 144 52 143"/>
+    <path d="M60 143 C64 146 70 148 76 146"/>
+    <path d="M86 146 C92 149 100 149 106 147"/>
+    <path d="M112 147 C118 149 126 148 132 146"/>
+    <path d="M138 145 C144 146 152 144 158 141"/>
+    <path d="M162 140 C168 140 176 136 180 130"/>
+  </g>
+
+  <!-- fios de pelo (textura) -->
+  <g fill="none" stroke="#C3CDDC" stroke-width="1.4" stroke-linecap="round">
+    <path d="M30 108 C40 112 46 112 54 108"/>
+    <path d="M62 106 C74 110 84 110 94 106"/>
+    <path d="M104 106 C116 110 128 110 140 106"/>
+    <path d="M148 106 C158 110 166 110 176 106"/>
+    <path d="M40 124 C52 128 62 128 72 124"/>
+    <path d="M90 128 C104 132 118 132 132 128"/>
+    <path d="M140 126 C150 129 160 128 168 124"/>
+  </g>
+  <!-- brilho no topo do pelo -->
+  <path d="M22 106 C50 98 90 97 130 98" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".95"/>
+  <!-- sombra na parte de baixo do pelo -->
+  <path d="M20 132 C60 144 140 146 186 128" fill="none" stroke="#8E9CB2" stroke-width="4" stroke-linecap="round" opacity=".35"/>
+
+  <!-- POMPOM -->
+  <g>
+    <circle cx="186" cy="86" r="20" fill="#7D8CA3" opacity=".4" transform="translate(2 3)"/>
+    <circle cx="186" cy="84" r="19" fill="url(#hcPom)"/>
+    <circle cx="174" cy="76" r="9" fill="url(#hcFloco)"/>
+    <circle cx="190" cy="68" r="9" fill="url(#hcFloco)"/>
+    <circle cx="200" cy="80" r="9" fill="url(#hcFloco)"/>
+    <circle cx="176" cy="92" r="9" fill="url(#hcFloco)"/>
+    <circle cx="192" cy="98" r="9" fill="url(#hcFloco)"/>
+    <circle cx="184" cy="82" r="8" fill="#fff"/>
+    <!-- fios e sombras do pompom -->
+    <g fill="none" stroke="#B3BFD0" stroke-width="1.4" stroke-linecap="round">
+      <path d="M176 90 C182 94 188 94 194 92"/>
+      <path d="M182 72 C188 76 194 76 198 72"/>
+      <path d="M192 88 C196 90 200 90 203 86"/>
+    </g>
+    <path d="M178 74 C182 70 188 69 194 70" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M182 100 C192 102 202 94 204 84" fill="none" stroke="#8E9CB2" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  </g>
+</svg>
+</div>
+
+
+
 </body>
 </html>
